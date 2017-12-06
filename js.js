@@ -65,7 +65,7 @@ var playerPointsElem = document.getElementById('js-playerPoints'),
     computerPointsElem = document.getElementById('js-computerPoints');
 
 function newGame() {
-    player.name = prompt('Please enter your name', 'Player\'s name');
+    player.name = prompt('Please enter your name', 'Your name');
     if (player.name) {
         player.score = computer.score = 0;
         gameState = 'started';
@@ -137,17 +137,19 @@ function setGamePoints() {
 
 function endGame() {
     if (player.score == 10) {
-        alert(player.name + ' You won!');
+        alert(player.name + ', you won!');
         gameState = 'notStarted';
         setGameElements();
         newGameBtn.innerHTML = 'Wanna play again?'
         playerResultElem.innerHTML = ' ';
         computerResultElem.innerHTML = ' ';
     } else if (computer.score == 10) {
-        alert(player.name + ' you lost. Sorry.');
+        alert(player.name + ', you lost. Sorry.');
         gameState = 'notStarted';
         setGameElements();
-        newGameBtn.innerHTML = 'Wanna play again?'
+        newGameBtn.innerHTML = 'Play again'
+        playerPickElem.innerHTML = ' ';
+        computerPickElem.innerHTML = ' ';
         computerResultElem.innerHTML = ' ';
         playerResultElem.innerHTML = ' ';
     }
