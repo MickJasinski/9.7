@@ -1,0 +1,88 @@
+/*==== General ====*/
+
+.container {
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+
+body {
+    background-color: #223506;
+    color: #fff;
+}
+
+/*==== Header ====*/
+
+h3 {
+    padding-bottom: 30px;
+    color: #cdf78f;
+}
+
+.label {
+    display: inline-block;
+    margin: 0 -4px;
+    border-radius: 0;
+    padding: 10px 30px;
+    color: #222;
+}
+
+.label-strip {
+    background-color: #E3FB8C;
+    margin-top: 20px;
+}
+
+.label-default {
+    background-color: #96BE02;
+}
+
+.label-info {
+    background-color: #C4F411;
+}
+
+.label-danger {
+    background-color: #96DE02;
+}
+
+/*==== New game button ====*/
+
+#js-newGameButton {
+    margin-top: 15vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #CEF63C;
+    transition: .4s;
+}
+
+#js-newGameButton:hover {
+    transform: rotate(360deg);
+}
+
+/*==== Pick buttons ====*/
+
+.btn {
+    margin: 15vh 10px 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #CEF63C;
+    transition: .4s;
+}
+
+.badge {
+    font-size: 60px;
+    background-color: rgba(0,0,0,0);
+}
+
+.fa {
+    color: #222;
+}

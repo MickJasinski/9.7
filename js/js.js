@@ -47,11 +47,7 @@ function setGameElements() {
             resultsElem.style.display = 'block';
             break;
         case 'ended':
-            newGameBtn.innerHTML = 'Play again';
-            playerPickElem.innerHTML = ' ';
-            computerPickElem.innerHTML = ' ';
-            computerResultElem.innerHTML = ' ';
-            playerResultElem.innerHTML = ' ';
+            newGameBtn.innerText = 'Play again';
         case 'notStarted':
         default:
             newGameElem.style.display = 'block';
@@ -144,9 +140,17 @@ function endGame() {
         alert(player.name + ', you won!');
         gameState = 'notStarted';
         setGameElements();
+        newGameBtn.innerHTML = 'Wanna play again?'
+        playerResultElem.innerHTML = ' ';
+        computerResultElem.innerHTML = ' ';
     } else if (computer.score == 10) {
         alert(player.name + ', you lost. Sorry.');
         gameState = 'notStarted';
         setGameElements();
+        newGameBtn.innerHTML = 'Play again'
+        playerPickElem.innerHTML = ' ';
+        computerPickElem.innerHTML = ' ';
+        computerResultElem.innerHTML = ' ';
+        playerResultElem.innerHTML = ' ';
     }
 }
